@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Records</title>
+    </head>
+    <style>
+        body{
+            background:linear-gradient(45deg,pink,blue);
+            font-size: x-large;
+            font-style: italic;
+        }
+    </style>
+    <body>
+        <form action="/update/{{data[0]}}"method="post">
+            <table>
+                <tr>
+                    <td>ID:</td>
+                    <td><input type="text" name="id" disabled value="{{data[0]}}"/></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" required value="{{data[1]}}"/></td>
+                </tr>
+                <tr>
+                    <td>Marks:</td>
+                    <td><input type="text" name="marks" required value="{{data[2]}}"/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Update"/></td>
+                    <td><input type="Reset"/></td>
+                </tr>
+            </table>   
+        </form>
+    </body>
+</html>
